@@ -14,4 +14,8 @@ class Profile extends Model
         'created_at',
         'updated_at'
     ];
+    //relacion de uno a uno inversa (user<-profile)
+    public function user() {
+        return $this->belongsTo(Profile::class);
+    }
 }
